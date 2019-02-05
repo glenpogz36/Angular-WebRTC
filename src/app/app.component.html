@@ -1,7 +1,6 @@
-<div *ngIf="!session" id="join">
-  <div id="join-dialog">
-    <h1>Join a video session</h1>
-    <form (submit)="joinSession()">
+
+    <h1>Welcome to RTC APP</h1>
+    <form>
       <p>
         <label>Participant </label>
         <input type="text" id="userName" name="userName" [(ngModel)]="myUserName" required>
@@ -10,15 +9,7 @@
         <label>Session </label>
         <input type="text" id="sessionId" name="sessionId" [(ngModel)]="mySessionId" required>
       </p>
-      <p class="text-center">
+      <p >
         <input type="submit" name="commit" value="Join!">
       </p>
     </form>
-  </div>
-</div>
-
-<div *ngIf="session" id="session">
-  <opv-session #ovSessionComponent [sessionName]="mySessionId" [user]="myUserName" [token]="token" (leaveSession)="handlerLeaveSessionEvent($event)"
-    (joinSession)="handlerJoinSessionEvent($event)" (error)="handlerErrorEvent($event)">
-  </opv-session>
-</div>

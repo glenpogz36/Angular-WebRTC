@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms";
+import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
 
-import { OpenViduModule } from 'angular-openvidu';
-import 'hammerjs';
+import { OpenviduSessionModule } from 'openvidu-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import 'hammerjs';
   imports: [
     BrowserModule,
     FormsModule,
-    OpenViduModule
+    OpenviduSessionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
