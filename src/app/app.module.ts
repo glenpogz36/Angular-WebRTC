@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { OpenviduSessionModule } from 'openvidu-angular';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+ 
   ],
   imports: [
     BrowserModule,
